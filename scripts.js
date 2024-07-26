@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const toggleModeBtn = document.getElementById('toggle-mode-btn');
-    const icon = toggleModeBtn.querySelector('i'); // Ensure correct targeting of the icon
+    const icon = toggleModeBtn.querySelector('i');
+    const navbarToggle = document.querySelector('.navbar-toggler');
     const darkModeToggler = document.querySelector('.dark-mode-toggler');
     const typingAnimation = document.querySelector('.typing-animation');
     const divider = document.querySelector('.divider');
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
 
         document.body.classList.toggle('dark-mode');
+        navbarToggle.classList.toggle('dark-mode');
         darkModeToggler.classList.toggle('dark-mode');
         typingAnimation.classList.toggle('dark-mode');
         aboutMe.classList.toggle('dark-mode');
@@ -91,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const isDarkMode = localStorage.getItem('dark-mode') === 'true';
     if (isDarkMode) {
         document.body.classList.add('dark-mode');
+        navbarToggle.classList.add('dark-mode');
         darkModeToggler.classList.add('dark-mode');
         typingAnimation.classList.add('dark-mode');
         aboutMe.classList.add('dark-mode');

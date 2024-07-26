@@ -7,6 +7,18 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.navbar-toggler {
+  border-color: #ffc107;
+}
+
+.navbar-toggler-icon{
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="%23ffc107" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"%3E%3C/path%3E%3C/svg%3E');
+}
+
+.navbar-toggler.dark-mode {
+  border-color: teal;
+}
+
 .logoFont{
     font-family: "Nova Mono", monospace;
     font-weight: 700;
@@ -610,6 +622,11 @@ body {
   }
   
   @media (max-width: 767px) {
+
+    .my-journey-title{
+      font-size: 16px;
+    }
+
     .timeline .timeline-continue::after {
       left: 40px;
     }
@@ -671,7 +688,6 @@ body {
 
 
 /*Portfolio*/
-
 .project-title{
   background: #ffc107;
   padding: 35px;
@@ -704,12 +720,20 @@ body {
 
 @media (max-width: 767px) {
   .btn {
+    font-size: 1.25rem;
+    margin-top: 0.75rem;
+    margin-right: 0.5rem;
+  }
+
+  .btn.dark-mode {
+    font-size: 1.25rem;
     margin-top: 0.75rem;
     margin-right: 0.5rem;
   }
 
   .btn:first {
     margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
